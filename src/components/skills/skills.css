@@ -1,0 +1,126 @@
+#skills{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.skillTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: #FF6F00;
+}
+.skillDesc{
+    font-weight: 300;
+    font-size: 1rem;
+    max-width: 60rem;
+    padding: 0 2rem;
+}
+.skillBars{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 70%;
+    text-align: left;
+}
+.skillBarText{
+    width: 200px;
+}
+.skillBar{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: #1e1e1e;
+    box-shadow: inset 5px 5px 12px #0c0c0c,
+            inset -5px -5px 12px #303030;
+   
+}
+.percentageCircles{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4rem;
+}
+.percentageCircle{
+    width: 20px;
+    height: 20px;
+    background-color: #FF6F00;
+    border-radius: 50%;
+    border: 1px solid #FF6F00;
+}
+.percentageCircle:last-child{
+    background-color: rgb(30, 30, 30);
+}
+.c3:nth-child(4){
+    background-color: rgb(30, 30, 30);
+}
+.skillBarImg{
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+.skillBarText>p{
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+@media screen and (max-width:720px){
+    .skillBarText>p{
+        font-size: 2vw;
+    }
+    
+    
+}
+
+@media screen and (max-width:480px){
+    .skillBar{
+        flex-direction: column;
+    }
+    .skillBarText{
+        width:0px;
+    }
+    
+    .skillBarImg{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+   
+    
+}
+@media screen and (max-width:414px){
+    .skillBar{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .percentageCircles{
+        padding-left: 0;
+    }
+    .skillBarText{
+        width: auto;
+    }
+    .skillBarImg{
+        margin-right: 0;
+    }
+    
+}
+@media screen and (max-width:360px){
+    .skillBar{
+        display: flex;
+        flex-direction: column;
+    }
+    .skillBarImg{
+        margin-right: 0;
+    }
+    .skillBarText{
+        width: auto;
+    }
+}

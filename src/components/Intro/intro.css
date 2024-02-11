@@ -1,0 +1,98 @@
+#intro{
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.bg{
+    position: absolute;
+    top: 2rem;
+    right: 6rem;
+    z-index: -1;
+    object-fit: cover;
+    height: 95vh;
+    /*filter: grayscale(100%);*/
+    filter: drop-shadow(8px 8px 10px #FF6F00);
+    
+}
+.introContent{
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.hello{
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+.introName{
+    color: #FF6F00;
+}
+.introPara{
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.btn{
+    width: 9rem;
+    background-color: #FF6F00;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: 1px solid #FF6F00;
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+.btn:hover{
+    background:rgb(30, 30, 30);
+    color: #FF6F00;
+}
+
+  
+  
+  @media screen and (max-width: 840px) {
+    .btn {
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+    }
+  
+    .icon {
+      font-size: 24px;
+    }
+  }
+  
+
+@media  screen and (max-width:840px) {
+    .bg{
+        right: -5vw;
+    }
+    .introContent{
+        font-size: 7vw;
+    }
+    .hello{
+        font-size: 4.5vw;
+    }
+    .btn {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: 600;
+      }
+}
+@media  screen and (max-width:480px) {
+    .bg{
+        right: -50vw;
+    }
+    .btn {
+        width: 100px;
+        height: 40px;
+        font-size: 9px;
+      }
+}

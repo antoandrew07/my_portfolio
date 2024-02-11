@@ -1,0 +1,152 @@
+#contactPage{
+    min-height: calc(100vh-4rem);
+    width: 100vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projectPageTitle{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FF6F00;
+}
+.projectDecs{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+
+.projectImgs {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.projectImg{
+    object-fit: cover;
+    width: 40%;
+    max-width: 17rem;
+    margin: auto;
+    padding: 0.25rem;
+}
+#projects{
+        padding: 2rem;
+}
+.contactPageTitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF6F00;
+}
+.contactDesc{
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+}
+.contactForm{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 60rem;
+}
+.name, .email, .msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: #1e1e1e;
+    box-shadow: inset 5px 5px 12px #0c0c0c,
+            inset -5px -5px 12px #303030;
+}
+.submitBtn{
+    /* background: #FF6F00; */
+    border: 1px solid #FF6F00;
+    padding: 0.75rem 3.5rem;
+    margin: 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: all 0.5s;
+    color: #FF6F00;
+}
+.submitBtn:hover{
+    background-color: #FF6F00;
+    border: 1px solid #FF6F00;
+    color: black;
+
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.social-button {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: #FF6F00;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-button i {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .social-button-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: #FF6F00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  .social-button:hover {
+    background-color: black;
+    color: #FF6F00;
+  }
+  
+  .social-button:hover .social-button-tooltip {
+    opacity: 1;
+  }
+  
+/* .projectImg:hover {
+    box-shadow: inset 0 0 20px rgb(0, 0, 0); 
+}
+.projectImg img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectImg:hover img {
+    transform: scale(1.2);
+    
+} */
