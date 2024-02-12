@@ -9,9 +9,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 const Contact = () => {
   const form = useRef();
   const [emailStatus, setEmailStatus] = useState(null);
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .sendForm('service_daegtz5', 'template_z1hnf5j', form.current, {
@@ -21,15 +22,18 @@ const Contact = () => {
         () => {
           setEmailStatus('SUCCESS');
           form.current.reset();
-          setTimeout(() => {
-            setEmailStatus(null);
-          }, 3000); // Set timeout for 2 seconds (2000 milliseconds)
         },
         (error) => {
           setEmailStatus('FAILED');
           console.error('Email sending failed:', error);
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false); 
+        setTimeout(() => {
+          setEmailStatus(null);
+        }, 5000); 
+      });
   };
 
   return (
@@ -56,8 +60,8 @@ const Contact = () => {
           <input type="text" className="name" placeholder="Your Name" name="your_name" required />
           <input type="email" className="email" placeholder="Your Email" name="your_email" required />
           <textarea className="msg" name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button className="submitBtn" type="submit" value="Send">
-            Submit
+          <button className={`submitBtn ${isSubmitting ? 'submitting' : ''}`} type="submit" value="Send" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send'}
           </button>
           {emailStatus && (
             <p className={`emailStatus ${emailStatus === 'SUCCESS' ? 'success' : 'failure'}`}>
