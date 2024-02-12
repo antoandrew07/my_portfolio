@@ -6,8 +6,6 @@ import projectImg1 from '../../assests/project1.png';
 import projectImg2 from '../../assests/project2.png';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-
-
 const Contact = () => {
   const form = useRef();
   const [emailStatus, setEmailStatus] = useState(null);
@@ -22,6 +20,10 @@ const Contact = () => {
       .then(
         () => {
           setEmailStatus('SUCCESS');
+          form.current.reset();
+          setTimeout(() => {
+            setEmailStatus(null);
+          }, 3000); // Set timeout for 2 seconds (2000 milliseconds)
         },
         (error) => {
           setEmailStatus('FAILED');
@@ -51,9 +53,9 @@ const Contact = () => {
           Please fill out the form to discuss job opportunities
         </span>
         <form className="contactForm" ref={form} onSubmit={sendEmail}>
-          <input type="text" className="name" placeholder="Your Name" name="your_name" />
-          <input type="email" className="email" placeholder="Your Email" name="your_email" />
-          <textarea className="msg" name="message" rows="5" placeholder="Your Message"></textarea>
+          <input type="text" className="name" placeholder="Your Name" name="your_name" required />
+          <input type="email" className="email" placeholder="Your Email" name="your_email" required />
+          <textarea className="msg" name="message" rows="5" placeholder="Your Message" required></textarea>
           <button className="submitBtn" type="submit" value="Send">
             Submit
           </button>
@@ -64,23 +66,22 @@ const Contact = () => {
           )}
 
           <div className="links">
-              <a href="https://www.instagram.com/_anto_andrew_/" target="_blank" rel="noopener noreferrer" className="social-button instagram" title="Instagram">
-                <i className="fab fa-instagram"></i>
-                <span className="social-button-tooltip">Instagram</span>
-              </a>
-              <a href="https://github.com/antoandrew07" target="_blank" rel="noopener noreferrer" className="social-button facebook" title="Facebook">
-                <i className="fa-brands fa-github"></i>
-                <span className="social-button-tooltip">GitHup</span>
-              </a>
-              <a href="https://www.linkedin.com/in/andrews-micheal-a04272270/" target="_blank" rel="noopener noreferrer" className="social-button linkedin" title="LinkedIn">
-                <i className="fab fa-linkedin"></i>
-                <span className="social-button-tooltip">LinkedIn</span>
-              </a>
-              <a href="https://twitter.com/MichealAnd20442" target="_blank" rel="noopener noreferrer" className="social-button twitter" title="Twitter">
-              
-                <i className="fa-brands fa-square-x-twitter"></i>
-                <span className="social-button-tooltip">Twitter</span>
-              </a>
+            <a href="https://www.instagram.com/_anto_andrew_/" target="_blank" rel="noopener noreferrer" className="social-button instagram" title="Instagram">
+              <i className="fab fa-instagram"></i>
+              <span className="social-button-tooltip">Instagram</span>
+            </a>
+            <a href="https://github.com/antoandrew07" target="_blank" rel="noopener noreferrer" className="social-button facebook" title="Facebook">
+              <i className="fa-brands fa-github"></i>
+              <span className="social-button-tooltip">GitHup</span>
+            </a>
+            <a href="https://www.linkedin.com/in/andrews-micheal-a04272270/" target="_blank" rel="noopener noreferrer" className="social-button linkedin" title="LinkedIn">
+              <i className="fab fa-linkedin"></i>
+              <span className="social-button-tooltip">LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/MichealAnd20442" target="_blank" rel="noopener noreferrer" className="social-button twitter" title="Twitter">
+              <i className="fa-brands fa-square-x-twitter"></i>
+              <span className="social-button-tooltip">Twitter</span>
+            </a>
           </div>
         </form>
       </div>
