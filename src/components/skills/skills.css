@@ -104,6 +104,9 @@
     .skillDesc{
         font-size: 0.75rem;
     }
+    .skillTitle{
+        padding-top: 0;
+    }
     .skillBar{
         flex-direction: column;
         justify-content: center;
