@@ -1,5 +1,5 @@
 .logo{
-    object-fit: cover;
+    
     width: 3rem;
     height: 3rem;
     border-radius: 150px;
@@ -27,7 +27,7 @@
 }
 
 .desktopMenuListItem:hover{
-    color: #FF6F00;
+    color: #ff6f00;
     
     padding-bottom: 0.5rem;
     
