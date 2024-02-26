@@ -42,7 +42,7 @@
     color: #FF6F00;
 }
 .contactDesc{
-    padding: 1rem;
+    /* padding: 1rem; */
     font-size: medium;
     font-weight: 300;
 }
@@ -153,3 +153,11 @@
     transform: scale(1.2);
     
 } */
+@media screen and (max-width:414px){
+    .projectDesc{
+        font-size: 0.75rem;
+    }
+    .projectPageTitle{
+        font-size: 2rem;
+    }
+}

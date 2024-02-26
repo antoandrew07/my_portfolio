@@ -40,3 +40,11 @@
     transform: scale(1.2);
 }
 
+@media screen and (max-width:414px){
+    .certificateDesc{
+        font-size: 0.75rem;
+    }
+    .certificateTitle{
+        font-size: 2rem;
+    }
+}

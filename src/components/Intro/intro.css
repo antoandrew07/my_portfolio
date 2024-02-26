@@ -87,12 +87,30 @@
       }
 }
 @media  screen and (max-width:480px) {
+    .hello{
+        font-size: 0.75rem;
+    }
+    .introPara{
+        font-size: 0.75rem;
+    }
+    .introContent{
+        padding-left: 1.5rem;
+        width: 90vw;
+    }
+    .introText{
+        font-size: 1.5rem;
+    }
     .bg{
-        right: -50vw;
+        right: 1vw;
+        height: 400px;
+        margin-top: 100px;
     }
     .btn {
-        width: 100px;
-        height: 40px;
+        width: 95px;
+        height: 30px;
         font-size: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 }

@@ -101,6 +101,9 @@
       }
 }
 @media screen and (max-width:414px){
+    .skillDesc{
+        font-size: 0.75rem;
+    }
     .skillBar{
         flex-direction: column;
         justify-content: center;
@@ -110,9 +113,15 @@
     }
     .skillBarText{
         width: auto;
+        font-size: 0.80rem;
     }
     .skillBarImg{
         margin-right: 0;
+        
+    }
+    .percentageCircle{
+        width: 13px;
+        height: 13px;
     }
     
 }
