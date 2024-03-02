@@ -6,7 +6,10 @@ import js from '../../assests/js.png'
 import mern from '../../assests/mern.png'
 const Skills = () => {
   return (
-    <section id="skills">
+    <section id="skills"
+    
+
+    >
         <span className="skillTitle">My Skills</span>
         <span className="skillDesc">Passionate MERN Stack developer adept at crafting robust and scalable web applications, proficient in MongoDB, Express.js, React.js, and Node.js.Dedicated to delivering dynamic user experiences through expert utilization of MERN technologies, with a strong focus on efficient backend development and responsive frontend design.</span>
         <div className="skillBars">
